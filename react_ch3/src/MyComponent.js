@@ -1,29 +1,17 @@
-import PropTypes from "prop-types";
-import { Component } from "react";
+// MyComponent.js
+import propTypes from "prop-types";
 
-class MyComponent extends Component {
-  render() {
-    const { name, favoriteNumber, children } = this.props;
-    return (
-      <div>
-        안녕하세요. 제 이름은 {name}입니다. <br />
-        children 값은 {children}입니다.
-        <br />
-        제가 좋아하는 숫자는 {favoriteNumber}입니다.
-      </div>
-    );
-  }
-}
-
-MyComponent.defaultProps = {
-  //기본 props 지정
-  name: "기본 이름",
+const MyComponent = ({ num, children }) => {
+  return (
+    <div>
+      안녕하세요, 오늘 배울 내용은 {num}장입니다. <br />
+      부모 태그 안의 내용은 {children} 입니다.
+    </div>
+  );
 };
 
-MyComponent.propTypes = {
-  //타입 지정
-  name: PropTypes.string,
-  favoriteNumber: PropTypes.number.isRequired,
+MyComponent.defaultProps = {
+  num: propTypes.number.isRequired,
 };
 
 export default MyComponent;
