@@ -1,9 +1,9 @@
 import { Component } from "react";
-import ValidationSample from "./ValidationSample";
+import ScrollBox from "./ScrollBox.js";
 
 class App extends Component {
   render() {
-    return <ValidationSample />;
+    return <ScrollBox />;
   }
 }
 
